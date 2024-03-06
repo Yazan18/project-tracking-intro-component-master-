@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+/* start fonts */
+
+/* Headings, Call-to-actions, Navigation */
+.barlow-condensed-regular {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+.barlow-condensed-bold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* body font */
+.barlow-regular {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* end fonts */
+
+body{
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.contuner{
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(6,minmax(auto,1fr));
+    grid-template-areas:
+    "logo logo logo nav nav nav"
+    "one one one two two two";
+}
+
+/* ############################ */
+
+
+.logo{
+    grid-area: logo;
+    margin-left: 100px;
+}
+.nav{
+    grid-area: nav;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15%;
+
+
+}
+.nav ul li{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+}
+
+.nav ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* #dot{
+    color: hsl(231, 7%, 65%);
+    font-family: none;
+    font-size: 25px;
+    line-height: 0.5;
+}
+.nav ul #dot:hover{
+    cursor: default;
+    text-decoration: none;
+} */
+#dot div{
+    width: 5px;
+    height: 5px;
+    background-color: hsl(231, 7%, 65%);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.nav ul #dot:hover{
+    cursor: default;
+} 
+.nav .login{
+    position: relative;
+    color: hsl(231, 7%, 65%);
+}
+/* .nav .login::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: red;
+} */
+
+/* ################################## */
+
+.one{
+    margin-top: 85px;
+    margin-left: 100px;
+}
+.one{
+    grid-area: one;
+}
+/* .one .new{
+
+} */
+.one .new #new{
+    color: white;
+    width: 45px;
+    height: 25px;
+    background-color: hsl(230, 29%, 20%);
+    text-align: center;
+    border-radius: 15px;
+}
+.one .new #new-text{
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+.one .new p{
+    display: inline-block;
+}
+.one .text{
+    margin-top: 20px;
+}
+.one .text h1{
+    text-transform: uppercase;
+    width: 345px;
+    color: hsl(230, 29%, 20%);
+    line-height: 1;
+    font-size: 45px;
+    word-spacing: 2px;
+}
+.one .text p{
+    margin-top: 20px;
+    width: 221px;
+    color: hsl(230, 11%, 40%);
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: 3px;
+}
+
+.one .button{
+    margin-top: 40px;
+}
+.one .button button{
+    border: none;
+    background-color: hsl(0, 100%, 68%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    width: 120px;
+    height: 40px;
+}
+.one .button button:hover{
+    cursor: pointer;
+    background-color: hsl(0deg 100% 68% / 80%);
+}
+
+.one .button p{
+    margin-left: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    color: hsl(231, 7%, 65%);
+    
+}
+
+/* ################################## */
+
+.two{
+    grid-area: two;
+    overflow-wrap: break-word;
+    margin-top: 30px;
+    position: relative;
+}
+.two::before{
+
+}
+.two .background{
+    background-color: hsl(207, 33%, 95%);
+    width: 102%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: -1;
+    position: absolute;
+    top: -50%;
+    right: 0;
+}
+
+/* .two .background::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    display: inline-block;
+    background-color: red;
+    width: 102%;
+    height: 100%;
+    top: 66px;
+    right: -250px;
+    border-radius: 49px; 
+} */
+
+.two .div-svg{
+    /* width: auto;
+    margin-left: 0; */
+    overflow: hidden;
+    margin-left: -15px;
+}
+
+
+/* #################################### */
+
+@media only screen and (min-width:769px){
+    .menu-div{
+        display: none;
+    }
+    .menu-close{
+        display: none;
+    }
+}
+@media only screen and (max-width:768px) {
+    .contuner{
+        /* margin: auto;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(6,minmax(auto,1fr));
+        grid-template-areas:
+        "logo logo logo nav nav nav"
+        "one one one two two two"; */
+        margin-top: 30px;
+        grid-template-areas:
+        "logo . . . . menu-nav"
+        "two two two two two two"
+        "one one one one one one";
+        margin-bottom: 50px;
+    }
+    .nav{
+        background-color: white;
+        width: 300px;
+        height: 250px;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        margin-top: 60px;
+        transform: translateX(-50%);
+    }
+    .nav ul{
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        list-style: none;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #dot div{
+        width: 250px;
+        height: 1px;
+        background-color: hsl(231, 7%, 65%);
+        border-radius: 0; 
+        margin-top: 0;
+    }
+    .menu-div{
+        grid-area: menu-nav;
+        cursor: pointer;
+    }
+    .menu-close{
+        grid-area: menu-nav;
+        cursor: pointer;
+        display: none;
+    }
+
+    .logo{
+        margin-left: 30px;
+    }
+
+    .one{
+        margin-left: 30px;
+    }
+    .two .background{
+        width: 50%;
+        height: 165%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50px;
+        position: absolute;
+    }
+    .two .img-svg{
+        width: 490px;
+        margin-left: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* background-color: hsl(207, 33%, 95%);
+    width: 50%;
+    height: 165%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 50px;
+    z-index: -1;
+    position: absolute;
+    top: -50%;
+    right: 0; */
